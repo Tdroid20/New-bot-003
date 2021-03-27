@@ -53,7 +53,7 @@ module.exports = class Vip extends Command {
         return;
       }
 
-      if (message.author.id !== "600804786492932101") return;
+      if (message.author.id !== "570700558533656586") return;
 
       if (["add", "adicionar", "setar"].includes(args[0].toLowerCase())) {
         if (!USER) {

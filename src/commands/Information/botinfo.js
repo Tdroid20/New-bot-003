@@ -54,7 +54,7 @@ module.exports = class BotInfo extends Command {
       .addFields(
         {
           name: "Meu Dono",
-          value: `**${owner.tag}** || **[${owner.username}](https://github.com/zSpl1nterUS)**`,
+          value: `**${owner.tag}** || **[${owner.username}](https://youtube.com/c/tdroid20youtuber)**`,
         },
         {
           name: `Informações Principais`,
@@ -66,7 +66,7 @@ module.exports = class BotInfo extends Command {
         },
         {
           name: `Meus Links`,
-          value: `[Meu Convite](https://discord.com/oauth2/authorize?client_id=788317008050782239&permissions=20887631278&scope=bot)\n[Servidor de Suporte](https://discord.gg/zX8Fq4V)`,
+          value: `[Meu Convite](https://discord.com/oauth2/authorize?client_id=821548564421148692&scope=bot&permissions=2147483647)\n[Servidor de Suporte](https://discord.gg/rtUw5sM58J)`,
         }
       )
       .setThumbnail(

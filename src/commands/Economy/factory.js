@@ -26,7 +26,7 @@ module.exports = class Factory extends Command {
       message.author;
 
     const user = await this.client.database.users.findOne({ idU: USER.id });
-    const fb = user?.factory;
+    const fb = user.factory;
 
     if (["info"].includes(args[0].toLowerCase())) {
       if (!fb.hasFactory)
@@ -100,7 +100,7 @@ module.exports = class Factory extends Command {
 
     if (["work", "trabalhar"].includes(args[0].toLowerCase())) {
       const user = await this.client.database.users.findOne({ idU: message.author.id });
-      const fd = user?.factory;
+      const fd = user.factory;
 
       if (!fd.hasFactory)
         return message.channel.send(
