@@ -42,22 +42,6 @@ module.exports = class {
       if (!list) return;
 
       list.map(async ([, x]) => {
-        // Caso queira que envie no canal que o membro usou o sistema;
-
-        const channel = await this.client.channels
-          .fetch(x.channel)
-          .catch(async () => {
-            return await this.Review(lista, doc, list);
-          });
-
-        channel.send(user, EMBED.setDescription(x.lembrete));
-        await this.Review(lista, doc, list);
-
-        //============================================================
-
-        // Caso queira que envie na DM do membro;
-
-        /*
 
         user.send(EMBED.setDescription(x.lembrete))
         .catch(async () => {
@@ -65,10 +49,7 @@ module.exports = class {
           });
 
         await this.Review(lista, doc, list);
-
-        */
-
-        //============================================================
+        
       });
     }
   }

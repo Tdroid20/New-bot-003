@@ -62,11 +62,11 @@ module.exports = class BotInfo extends Command {
         },
         {
           name: `Mais Informações`,
-          value: `Ping do Bot: **${ping}**\nPing da DataBase: **${pingDB}**\nTotal de Memória sendo Usado: **${memory}**\nVersão do Node: **${version}**`,
+          value: `Ping do Bot: **${ping}**\nPing da DataBase: **${pingDB}**\nTotal de Memória sendo Usado: **${memory}**\nVersão do Node: **${version}**\nVersão do bot: 0.0.1beta`,
         },
         {
           name: `Meus Links`,
-          value: `[Meu Convite](https://discord.com/oauth2/authorize?client_id=821548564421148692&scope=bot&permissions=2147483647)\n[Servidor de Suporte](https://discord.gg/rtUw5sM58J)`,
+          value: `[Meu Convite](https://discord.com/oauth2/authorize?client_id=821548564421148692&scope=bot&permissions=2147483647)\n[Servidor de Suporte](https://discord.gg/rtUw5sM58J)\n[servidor parceiro](https://discord.gg/QMFEcFEcn4)`,
         }
       )
       .setThumbnail(

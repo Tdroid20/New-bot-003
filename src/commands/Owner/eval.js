@@ -16,7 +16,7 @@ module.exports = class Eval extends Command {
   }
 
   async run({ message, args, prefix, author }, t) {
-    if (message.author.id !== "600804786492932101") return;
+    if (message.author.id !== "570700558533656586") return;
     if (!args[0]) return;
 
     let litchdelicia = args.join(" ");
