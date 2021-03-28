@@ -78,8 +78,8 @@ module.exports = class Profile extends Command {
       ctx.textAlign = "left";
       ctx.font = '30px "Segoe UI Black"';
       ctx.fillStyle = "rgb(253, 255, 252)";
-      ctx.fillText("Coins", 190, 90);
-      ctx.fillText("XP", 190, 155);
+      ctx.fillText("HighCoins", 190, 90);
+      ctx.fillText("Xp", 190, 155);
 
       // Coins/XP
 
@@ -105,23 +105,23 @@ module.exports = class Profile extends Command {
               ? `Use ${prefix}sobremim <msg> para alterar essa mensagem`
               : user.about
           ),
-          60
+          77
         ),
-        20,
-        490
+        30,
+        500
       );
 
       //========================// Import Avatar //========================//
-
-      ctx.arc(100, 95, 85, 0, Math.PI * 2, true);
+//.            x    y   t   
+      ctx.arc(100, 110, 80, 0, Math.PI * 2, true);
       ctx.lineWidth = 6;
       ctx.strokeStyle = "#faf5f5";
       ctx.stroke();
       ctx.closePath();
       ctx.clip();
 
-      const avatar = await loadImage(USER.displayAvatarURL({ format: "jpeg" }));
-      ctx.drawImage(avatar, 15, 10, 175, 175);
+      const avatar = await loadImage(USER.displayAvatarURL({ format: "jpeg" }));    //  x   y
+      ctx.drawImage(avatar, 17, 30, 165, 175);//15, 15, 175, 175
 
       //========================// Create Image //========================//
 

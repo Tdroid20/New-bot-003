@@ -1,4 +1,6 @@
+const path = require("path");
 require("dotenv").config();
+
 
 const express = require('express');
 const app = express();
@@ -8,7 +10,7 @@ app.get('/', (request, response) => {
 	console.log(
 		`Ping recebido às ${ping.getUTCHours()}:${ping.getUTCMinutes()}:${ping.getUTCSeconds()}`
 	);
-	response.sendStatus(200);
+	response.sendFile(path.join(__dirname, "/src/dashboard/index.html"));
 });
 app.listen(process.env.PORT); //receber pings que deixa online
 const { APIMessage, Message } = require("discord.js");

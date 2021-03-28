@@ -90,10 +90,10 @@ module.exports = class Logs extends Command {
           `Comando requisitado por ${message.author.username}`,
           message.author.displayAvatarURL({ dynamic: true })
         )
-        .setThumbnail(client.user.displayAvatarURL({ size: 2048 }))
+        .setThumbnail(message.client.user.displayAvatarURL({ size: 2048 }))
         .setAuthor(
           `Sistema de Logs - ${message.guild.name}`,
-          client.user.displayAvatarURL()
+          message.client.user.displayAvatarURL()
         )
         .addFields(
           {

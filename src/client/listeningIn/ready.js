@@ -16,8 +16,14 @@ const status = [
         name: "! | Droid tech Company",
       },
       {
-        name: "prefix !",
+        name: "!help para obter ajuda",
       },
+      {
+      	name: "digite !perfil para criar seu perfil!"
+			},
+			{
+      	name: "!|me adicione e ajude bater 100 servidores"
+			}		
     ];
     setInterval(() => {
       var randomStatus = status[Math.floor(Math.random() * status.length)];

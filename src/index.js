@@ -7,6 +7,8 @@ const Locale = require("../lib");
 const Guild = require("./database/Schemas/Guild");
 const Files = require("./utils/Files");
 const c = require("colors");
+const owner = process.env.OWNER_ID
+const team = process.env.TEAM_ID
 class Main extends Client {
   constructor(options) {
     super(options);
@@ -112,6 +114,15 @@ const onLoad = async () => {
 
   client.login();
 };
+client.on('ready', () => {
+	var channel = client.channels.cache.find(ch => ch.id === "825194102698016808");
+	
+	console.log('conectando...')
+	console.log('verificando...')
+	console.log('id do dono:', process.env.OWNER_ID)
+  console.log(`usuario: ${client.user.tag} conectado`);
+  channel.send(`loginbot:\n:crown:dono:<@${owner}>\n${client.user.tag} está on!`)
+});
 
 onLoad();
 

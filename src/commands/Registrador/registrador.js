@@ -34,8 +34,7 @@ module.exports = class Registrador extends Command {
         async (err, user) => {
           if (args[0] == "set") {
             const ROLE =
-              message.mentions.roles.first() ||
-              message.guild.roles.find((x) => x.id == args[1]);
+              message.mentions.roles.first() || message.guild.roles.find((x) => x.id == args[1]);
             if (!ROLE) {
               return message.quote(
                 `${message.author}, insira o ID/mencione a ROLE desejada para setar como cargo de registrador.`
