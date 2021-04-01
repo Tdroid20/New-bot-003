@@ -33,6 +33,8 @@ module.exports = class Profile extends Command {
       message.author;
 
     User.findOne({ idU: USER.id }, async (err, user) => {
+
+      console.log(user)
       const canvas = createCanvas(1280, 720);
       const ctx = canvas.getContext("2d");
       let nextLevel = user.Exp.nextLevel * user.Exp.level;
@@ -43,6 +45,10 @@ module.exports = class Profile extends Command {
         "./src/assets/img/jpeg/background.jpg"
       );
       ctx.drawImage(background, 0, 0, 1280, 720);
+
+			//========================// Import badgade //========================//
+     if (message.author.id !== "570700558533656586") return console.log('nao acionado perfil') 
+      ctx.drawImage(badgadehfs, 1070, 50, 50, 50);
 
       //========================// Import BreakLines //========================//
 
@@ -80,6 +86,13 @@ module.exports = class Profile extends Command {
       ctx.fillStyle = "rgb(253, 255, 252)";
       ctx.fillText("HighCoins", 190, 90);
       ctx.fillText("Xp", 190, 155);
+      // badgade oficial
+
+      ctx.textAlign = "left";
+      ctx.font = '30px "Segoe UI Black"';
+      ctx.fillStyle = "rgb(253, 255, 252)";
+      ctx.fillText("badgade hf", 1070, 50);
+    //\n
 
       // Coins/XP
 
