@@ -34,7 +34,6 @@ module.exports = class Profile extends Command {
 
     User.findOne({ idU: USER.id }, async (err, user) => {
 
-      console.log(user)
       const canvas = createCanvas(1280, 720);
       const ctx = canvas.getContext("2d");
       let nextLevel = user.Exp.nextLevel * user.Exp.level;
@@ -47,8 +46,24 @@ module.exports = class Profile extends Command {
       ctx.drawImage(background, 0, 0, 1280, 720);
 
 			//========================// Import badgade //========================//
-     if (message.author.id !== "570700558533656586") return console.log('nao acionado perfil') 
-      ctx.drawImage(badgadehfs, 1070, 50, 50, 50);
+
+			
+
+      if(user.badges.includes("developer")) {
+        const badgadehfs = await loadImage("./src/assets/img/png/bgstaff.png");
+        ctx.drawImage(badgadehfs, 227, 650, 50, 50);
+      } if(user.badges.includes("hfbg")) {
+        const badgadehfs = await loadImage("./src/assets/img/png/hfbg.png");
+        ctx.drawImage(badgadehfs, 270, 650, 50, 60);
+      } if(user.badges.includes("droid-tech")) {
+        const badgadehfs = await loadImage("./src/assets/img/png/tdbg.png");
+        ctx.drawImage(badgadehfs, 320, 650, 50, 60);
+			} if(user.badges.includes("rehash")) {
+        const badgadehfs = await loadImage("./src/assets/img/png/rhbg.png");
+        ctx.drawImage(badgadehfs, 370, 645, 70, 70);
+			}
+
+
 
       //========================// Import BreakLines //========================//
 
@@ -91,7 +106,7 @@ module.exports = class Profile extends Command {
       ctx.textAlign = "left";
       ctx.font = '30px "Segoe UI Black"';
       ctx.fillStyle = "rgb(253, 255, 252)";
-      ctx.fillText("badgade hf", 1070, 50);
+      ctx.fillText("badgade hf:", 40,  687);
     //\n
 
       // Coins/XP

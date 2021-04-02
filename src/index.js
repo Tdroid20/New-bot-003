@@ -38,7 +38,7 @@ class Main extends Client {
   async initLoaders() {
     return Files.requireDirectory("./src/loaders", (Loader) => {
       Loader.load(this).then(
-        console.log(c.red("[Loaders] - Pasta Loaders carregada com sucesso."))
+        console.log(c.green("[Loaders] - Pasta Loaders carregada com sucesso."))
       );
     });
   }
@@ -121,10 +121,13 @@ client.on('ready', async () => {
 
   console.log(user)
 	
-	console.log('conectando...')
-	console.log('verificando...')
-	console.log('id do dono:', process.env.OWNER_ID)
-  console.log(`usuario: ${client.user.tag} conectado`);
+	console.log(c.yellow('conectando...'))
+	console.log(c.yellow('verificando...'))
+	console.log(c.yellow('aplicação da Droid tech company'))
+	console.log(c.blue('verificado com sucesso'))
+	console.log(c.blue('conectado'))
+	console.log(c.blue('id do dono:', process.env.OWNER_ID))
+  console.log(c.green(`bot: ${client.user.tag} on-line`));
   channel.send(`loginbot:\n:crown:dono: ${user.tag}\n${client.user.tag} está on!`)
 });
 

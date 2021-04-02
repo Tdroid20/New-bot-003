@@ -4,7 +4,7 @@ const ClientEmbed = require("../../structures/ClientEmbed");
 const moment = require("moment");
 require("moment-duration-format");
 
-module.exports = class BotInfo extends Command {
+module.exports = class Botinfo extends Command {
   constructor(client) {
     super(client);
     this.client = client;

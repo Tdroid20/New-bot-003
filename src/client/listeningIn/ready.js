@@ -13,17 +13,23 @@ module.exports = class {
     
 const status = [
       {
-        name: "! | Droid tech Company",
+        name: "h! | Droid tech Company",
       },
       {
-        name: "!help para obter ajuda",
+        name: "h! | help para obter ajuda",
       },
       {
-      	name: "digite !perfil para criar seu perfil!"
+      	name: "digite h!perfil para criar seu perfil!"
 			},
 			{
-      	name: "!|me adicione e ajude bater 100 servidores"
-			}		
+      	name: "h!| me adicione e ajude bater 100 servidores"
+			},
+			{
+				name: "h! | novo sistema de badgets!"
+			},
+			{
+				name: "h! | lançamento oficial em 10/4/21"
+			}
     ];
     setInterval(() => {
       var randomStatus = status[Math.floor(Math.random() * status.length)];

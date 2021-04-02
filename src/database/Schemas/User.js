@@ -78,6 +78,7 @@ let userSchema = new Schema({
     list: { type: Array, default: [] },
     has: { type: Number, default: 0 },
   },
+  badges: { type: Array, default: [] }
 });
 
 const User = mongoose.model("Users", userSchema);

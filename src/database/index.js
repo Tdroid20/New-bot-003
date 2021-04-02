@@ -10,7 +10,7 @@ module.exports = {
         useFindAndModify: false,
       });
 
-      console.log(c.red(`[DataBase] - Conectado ao Banco de Dados.`));
+      console.log(c.green(`[DataBase] - Conectado ao Banco de Dados.`));
     } catch (err) {
       if (err) return console.log(c.red(`[DataBase] - ERROR:`, +err));
     }
