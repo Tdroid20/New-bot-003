@@ -38,8 +38,8 @@ module.exports = class Badgeinfo extends Command {
 			<:staff:827404163126263808> highframe developer
 > essa é outra insigna rara que somente quem trabalha ou contribuio no bot consegue ter ela em seu perfil do bot, ela tem atualmente 2 versoẽs, 
 
-> verde: entregue a aqueles que trabalham no bot atualmente
-> amarela: entregue a aqueles que deram uma contriçao na criação do bot
+> <:staff:827404163126263808> verde: entregue a aqueles que trabalham no bot atualmente
+> <:staffHelper:827543068134998017> amarela: entregue a aqueles que deram uma contribuiçao na criação do bot
 
 			<:Rehash:827404256473514035> Rehash
 essa insigna e entrgue a aqueles que chegar ao level 18 dentro do server **REHASH**, entre no server da Rehash e alcance level 18 e resgate sua badgat${b}(essa badget tera um prazo para resgatar, aproveite o mais rapido possivel)${b}

@@ -22,6 +22,7 @@ module.exports = class Help extends Command {
     const { commands } = message.client;
 
     const AJUDA = new ClientEmbed(author)
+			.setColor('#35FF00')
       .setAuthor(
         `${t("commands:help.title")}`,
         this.client.user.displayAvatarURL({ size: 2048 })

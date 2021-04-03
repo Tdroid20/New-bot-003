@@ -26,7 +26,7 @@ module.exports = class McBust extends Command {
       );
 
     const EMBED = new ClientEmbed(author)
-
+			.setColor('#35FF00')
       .setTitle(`${Emojis.Minecraft} - Nick: ${nick}`)
       .setImage(`https://minotar.net/bust/${nick}/200.png`);
 

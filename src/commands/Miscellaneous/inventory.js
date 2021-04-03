@@ -27,7 +27,7 @@ module.exports = class Inventory extends Command {
 
     const test = list.sort((x, f) => f[1].id - x[1].id);
 
-    const EMBED = new ClientEmbed(author).setDescription(
+    const EMBED = new ClientEmbed(author).setColor('#35FF00').setDescription(
       test
         .map(
           ([_, value]) =>

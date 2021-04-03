@@ -26,7 +26,7 @@ module.exports = class McSkin extends Command {
       );
 
     const EMBED = new ClientEmbed(author)
-
+			.setColor('#35FF00')
       .setTitle(`${Emojis.Minecraft} - Nick: ${nick}`)
       .setImage(`https://mc-heads.net/body/${nick}/300`);
 

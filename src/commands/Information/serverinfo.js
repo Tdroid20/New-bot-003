@@ -40,6 +40,7 @@ module.exports = class ServerInfo extends Command {
       ].join("\n");
 
       const SERVERINFO = new ClientEmbed(author)
+				.setColor('#35FF00')
         .setAuthor(message.guild.name, message.guild.iconURL({ dynamic: true }))
         .addFields(
           { name: "ID do Servidor:", value: message.guild.id, inline: true },

@@ -28,8 +28,27 @@ module.exports = class XP extends Command {
       await require("mongoose")
         .connection.collection("users")
         .find({ "Exp.xp": { $gt: 5 } })
-        .toArray((err, res) => {
+        .toArray( async (err, res) => {
           if (err) throw err;
+
+          if(message.author.id == process.env.OWNER_ID) {
+            if(Number(args[1])) {
+              if (args[0] == "add") {
+                user.Exp.level = user.Exp.level + Number(args[1])
+                user.Exp.xp = 0
+              } else if (args[0] == "remove") {
+                user.Exp.level = user.Exp.level - Number(args[1])
+                user.Exp.xp = 0
+              } else if (args[0] == "set") {
+                user.Exp.level = Number(args[1])
+                user.Exp.xp = 0
+              }
+              await user.save()
+            } else {
+              args[1] && message.channel.send("Valor invalido");
+            }
+          }
+
           let Exp = res.map((x) => x.Exp).sort((x, f) => f.level - x.level);
 
           let ranking =

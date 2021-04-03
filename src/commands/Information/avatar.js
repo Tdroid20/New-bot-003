@@ -34,6 +34,7 @@ module.exports = class Avatar extends Command {
     const EMBED = new ClientEmbed(author)
 
       .setTitle(user.username)
+			.setColor('#35FF00')
       .setDescription(`Clique **[aqui](${avatar})** para baixar o avatar.`)
       .setImage(avatar);
 

@@ -37,6 +37,7 @@ module.exports = class McServer extends Command {
       const EMBED = new ClientEmbed(author)
 
         .setTitle(`${Emojis.Minecraft} - Minecraft Server Status`)
+				.setColor('#35FF00')
         .addFields(
           {
             name: `Status do Servidor`,

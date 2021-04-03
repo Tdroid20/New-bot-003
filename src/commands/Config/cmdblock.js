@@ -31,7 +31,8 @@ module.exports = class CmdBlock extends Command {
 
       if (!args[0]) {
         const HELP = new ClientEmbed(author)
-          .setAuthor(
+          .setColor('#35FF00')
+					.setAuthor(
             `${message.guild.name} - Sistema de Bloquear Comandos`,
             message.guild.iconURL({ dynamic: true })
           )

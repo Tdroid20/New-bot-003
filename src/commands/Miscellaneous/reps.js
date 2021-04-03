@@ -34,7 +34,7 @@ module.exports = class Reps extends Command {
       rep.lastSend == "null" ? "" : await this.client.users.fetch(rep.lastSend);
 
     const EMBED = new ClientEmbed(author)
-
+			.setColor('#35FF00')
       .setTitle(`Informações sobre suas Reputações`)
       .addFields(
         {

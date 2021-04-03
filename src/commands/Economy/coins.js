@@ -26,6 +26,25 @@ module.exports = class Coins extends Command {
       message.author;
 
     User.findOne({ idU: USER.id }, async (err, user) => {
+  
+      if (message.author.id == process.env.OWNER_ID) {
+
+        if(Number(args[1])) {
+                if (args[0] == "add") {
+          user.bank = user.bank + Number(args[1])
+        } else if (args[0] == "remove") {
+          user.bank = user.bank - Number(args[1])
+        } else if (args[0] == "set") {
+          user.bank = Number(args[1])
+        }
+        await user.save()
+        } else {
+          args[1] && message.channel.send("Valor invalido");
+        }
+        
+
+      }
+
       let coins = user.coins;
       let bank = user.bank;
 
@@ -34,6 +53,7 @@ module.exports = class Coins extends Command {
           `${USER.username} - Coins`,
           USER.displayAvatarURL({ dynamic: true })
         )
+				.setColor('#35FF00')
         .addFields(
           {
             name: `${Emojis.Bank} Coins fora do Banco`,

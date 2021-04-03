@@ -45,6 +45,7 @@ module.exports = class Ban extends Command {
         return message.quote(`${message.author}, você não pode si banir.`);
       } else {
         const BAN = new ClientEmbed(author)
+					.setColor('#35FF00')
           .setAuthor(
             `${message.guild.name} - Membro Banido`,
             message.guild.iconURL({ dynamic: true })

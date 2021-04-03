@@ -61,6 +61,12 @@ module.exports = class Profile extends Command {
 			} if(user.badges.includes("rehash")) {
         const badgadehfs = await loadImage("./src/assets/img/png/rhbg.png");
         ctx.drawImage(badgadehfs, 370, 645, 70, 70);
+			} if(user.badges.includes("helperhf")) {
+        const badgadehfs = await loadImage("./src/assets/img/png/helperhf.png");
+        ctx.drawImage(badgadehfs, 227, 650, 50, 50);
+			} if(user.badges.includes('suportint')) {
+        const badgadehfs = await loadImage("./src/assets/img/png/suportint.png");
+        ctx.drawImage(badgadehfs, 450, 645, 70, 70);
 			}
 
 

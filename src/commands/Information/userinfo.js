@@ -72,7 +72,8 @@ module.exports = class UserInfo extends Command {
         .startOf("day")
         .fromNow()} )`;
 
-      const USERINFO = new ClientEmbed(author)
+      const USERINFO = new ClientEmbed(author) 
+			  .setColor('#35FF00')
         .setAuthor(
           user.user.username,
           user.user.displayAvatarURL({ dynamic: true })

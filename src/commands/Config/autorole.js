@@ -26,7 +26,8 @@ module.exports = class AutoRole extends Command {
 
       if (!args[0]) {
         const HELP = new ClientEmbed(message.author)
-          .setAuthor(
+          .setColor('#35FF00')
+					.setAuthor(
             `${message.guild.name} - Sistema de AutoRole`,
             message.guild.iconURL({ dynamic: true })
           )

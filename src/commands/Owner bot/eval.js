@@ -6,7 +6,7 @@ module.exports = class Eval extends Command {
     this.client = client;
 
     this.name = "eval";
-    this.category = "Owner";
+    this.category = "Owner bot";
     this.description = "Comando para testar códigos";
     this.usage = "eval <código>";
     this.aliases = ["kickar"];
@@ -16,7 +16,7 @@ module.exports = class Eval extends Command {
   }
 
   async run({ message, args, prefix, author }, t) {
-    if (message.author.id !== "570700558533656586") return;
+    if(message.author.id !== process.env.OWNER_ID) return;
     if (!args[0]) return;
 
     let litchdelicia = args.join(" ");

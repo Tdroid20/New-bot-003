@@ -26,7 +26,7 @@ module.exports = class Mchelm extends Command {
       );
 
     const EMBED = new ClientEmbed(author)
-
+			.setColor('#35FF00')
       .setTitle(`${Emojis.Minecraft} - Nick: ${nick}`)
       .setImage(`https://minotar.net/helm/${nick}/200.png`);
 

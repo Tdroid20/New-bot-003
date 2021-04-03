@@ -45,6 +45,7 @@ module.exports = class Kick extends Command {
         return message.quote(`${message.author}, você não pode si kickar.`);
       } else {
         const KICK = new ClientEmbed(author)
+					.setColor('#35FF00')
           .setAuthor(
             `${message.guild.name} - Membro Kickado`,
             message.guild.iconURL({ dynamic: true })

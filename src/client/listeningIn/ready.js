@@ -22,7 +22,7 @@ const status = [
       	name: "digite h!perfil para criar seu perfil!"
 			},
 			{
-      	name: "h!| me adicione e ajude bater 100 servidores"
+      	name: "h! | me adicione e ajude bater 100 servidores"
 			},
 			{
 				name: "h! | novo sistema de badgets!"

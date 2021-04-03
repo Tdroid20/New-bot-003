@@ -9,7 +9,7 @@ module.exports = class Lnaguage extends Command {
     this.name = "lang";
     this.category = "Config";
     this.description = "Comando para alterar a linguagem do bot no servidor.";
-    this.usage = "lang";
+    this.usage = "lang <id language>";
     this.aliases = ["language"];
 
     this.enabled = true;
@@ -37,6 +37,7 @@ module.exports = class Lnaguage extends Command {
     if (!args[0]) {
       const EMBED = new ClientEmbed(author)
         .setTitle(`Linguagens Disponíveis`)
+				.setColor('#35FF00')
         .setDescription(
           `${Object.entries(lang)
             .map(([, x]) => `ID: **${x.id}** - ${x.language}`)
@@ -71,3 +72,4 @@ module.exports = class Lnaguage extends Command {
     }
   }
 };
+

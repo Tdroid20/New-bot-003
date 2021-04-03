@@ -20,16 +20,20 @@ module.exports = class Badgeinfo extends Command {
   }
 
   async run({ message, args, prefix, author }, t) {
+
+    const usuarioAlvo = this.client.users.cache.get(args[0]) || message.mentions.users.first() || message.author;
+
 		const EMBED = new Discord.MessageEmbed()
 
-      .setAuthor(`insigneas de ${message.author.tag}`)
+      .setAuthor(`insigneas de ${usuarioAlvo.tag}`)
+			.setColor('#35FF00')
 			.setTitle('badges oficiais do bot')
 			.setDescription(``)
       .setThumbnail(
-        message.author.displayAvatarURL({ format: "jpg", size: 2048 })
+        usuarioAlvo.displayAvatarURL({ format: "jpg", size: 2048 })
       );
 
-      await User.findOne({ idU: message.author.id }, (e, res) => { 
+      await User.findOne({ idU: usuarioAlvo.id }, (e, res) => { 
         for(const element of res.badges) {
           console.log(element)
           EMBED.addField('Insignea', element)

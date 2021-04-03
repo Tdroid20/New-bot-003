@@ -8,7 +8,7 @@ module.exports = class Manu extends Command {
     this.client = client;
 
     this.name = "manu";
-    this.category = "Owner";
+    this.category = "Owner bot";
     this.description = "Comando para colocar outros comandos em manutenção";
     this.usage = "eval <código>";
     this.aliases = ["manu"];

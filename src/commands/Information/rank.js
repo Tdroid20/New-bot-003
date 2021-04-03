@@ -30,6 +30,7 @@ module.exports = class Rank extends Command {
             [...Exp.values()].findIndex((x) => x.id === message.author.id) + 1;
 
           const EMBED = new ClientEmbed(author)
+						.setColor('#35FF00')
             .setAuthor(
               `${this.client.user.username} - Ranking de XP`,
               this.client.user.displayAvatarURL()

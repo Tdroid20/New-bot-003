@@ -11,7 +11,7 @@ module.exports = class Vip extends Command {
     this.client = client;
 
     this.name = "vip";
-    this.category = "Owner";
+    this.category = "Owner bot";
     this.description = "Comando para adicionar VIP aos usuários.";
     this.usage = "vip";
     this.aliases = [];

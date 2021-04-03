@@ -7,7 +7,7 @@ module.exports = class Badges extends Command {
     this.client = client;
 
     this.name = "badges";
-    this.category = "Owner";
+    this.category = "Owner bot";
     this.description = "Comando para editas as insigneas de um usuario";
     this.usage = "badges <add/remove> <badges> <@user>";
     this.aliases = ["insignea", "bg"];
@@ -26,14 +26,15 @@ module.exports = class Badges extends Command {
           res.badges.push(args[1]);
           await res.save()
         })
-        message.channel.send("Edited")
+        message.channel.send("added")
       } else if (args[0] == "remove") {
         User.findOne({ idU: usuarioAlvo.id }, async (e, res) => {
           if(!res.badges) res.badges = [];
-          res.badges.filter(item => item !== args[1])
-          await res.save()
+          res.badges = res.badges.filter(item => item !== args[1])
+
+          await res.save();
         })
-        message.channel.send("user Edited")
+        message.channel.send("user edited")
       }
   }
 }  

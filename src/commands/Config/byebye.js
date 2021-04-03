@@ -11,7 +11,7 @@ module.exports = class ByeBye extends Command {
     this.category = "Config";
     this.description =
       "Comando para configurar o sistema de mensagens de saída";
-    this.usage = "byebye";
+    this.usage = "byebye <on/off> //apos ";
     this.aliases = ["bye"];
 
     this.enabled = true;

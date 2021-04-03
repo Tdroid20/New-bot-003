@@ -8,7 +8,7 @@ module.exports = class BlackList extends Command {
     this.client = client;
 
     this.name = "blacklist";
-    this.category = "Owner";
+    this.category = "Owner bot";
     this.description = "Comando para colocar membros em minha Lista Negra";
     this.usage = "blacklist";
     this.aliases = ["kickar"];
@@ -28,6 +28,7 @@ module.exports = class BlackList extends Command {
           );
         } else {
           const LIST = new ClientEmbed(author)
+						.setColor('#35FF00')
             .setAuthor(
               `${this.client.user.username} - Lista Negra`,
               this.client.user.displayAvatarURL()
