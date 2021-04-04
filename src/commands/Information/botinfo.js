@@ -61,7 +61,7 @@ module.exports = class Botinfo extends Command {
         },
         {
           name: `Informações Principais`,
-          value: `<:usurioshf:827587802278920272>Usuários do Bot: **${users.toLocaleString()}**\n<:ServerHF:827577620731920396>Servidores do Bot: **${servers.toLocaleString()}**\n<:comandos:827580381380476929>Tenho **${commands}** Comandos\n:green_circle:Tempo Online: **\`${uptime}\`**\n<:dtc:814899023684042782>minha empresa:**Droid tech company**\n<:botprefix:827607370598580244>Meu prefixo nese servidor é **${prefix}**`,
+          value: `<:usurioshf:827587802278920272>Usuários do Bot: **${users.toLocaleString()}**\n<:ServerHF:827577620731920396>Servidores do Bot: **${servers.toLocaleString()}**\n<:comandos:827580381380476929>Tenho **${commands}** Comandos\n:green_circle:Tempo desde o ultimo reinicio: **\`${uptime}\`**\n<:dtc:814899023684042782>minha empresa:**Droid tech company**\n<:botprefix:827607370598580244>Meu prefixo nese servidor é **${prefix}**`,
         },
         {
           name: `Mais Informações`,
@@ -69,7 +69,7 @@ module.exports = class Botinfo extends Command {
         },
         {
           name: `Meus Links`,
-          value: `[Meu Convite](https://discord.com/oauth2/authorize?client_id=821548564421148692&scope=bot&permissions=2147483647)\n[Servidor de Suporte](https://discord.gg/bVuYUBkmpU)\n[servidor parceiro](https://discord.gg/QMFEcFEcn4)`,
+          value: `[Meu Convite](https://discord.com/oauth2/authorize?client_id=821548564421148692&scope=bot&permissions=2147483647)\n[meu servidor](https://discord.gg/s3UqkTqMs3)\n[servidor parceiro](https://discord.gg/QMFEcFEcn4)`,
         }
       )
       .setThumbnail(

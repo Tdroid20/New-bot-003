@@ -59,6 +59,7 @@ module.exports = class Vip extends Command {
         if (!USER) {
           return message.channel.send(
             `${Emojis.Errado} - ${message.author}, você deve mencionar/inserir o ID de quem deseja setar VIP.`
+						
           );
         } else if (!args[1]) {
           return message.channel.send(

@@ -27,6 +27,7 @@ module.exports = class Profile extends Command {
   }
 
   async run({ message, args, prefix, author }, t) {
+
     const USER =
       this.client.users.cache.get(args[0]) ||
       message.mentions.users.first() ||
@@ -67,6 +68,9 @@ module.exports = class Profile extends Command {
 			} if(user.badges.includes('suportint')) {
         const badgadehfs = await loadImage("./src/assets/img/png/suportint.png");
         ctx.drawImage(badgadehfs, 450, 645, 70, 70);
+			} if(user.badges.includes('phf')) {
+        const badgadehfs = await loadImage("./src/assets/img/png/phf.png");
+        ctx.drawImage(badgadehfs, 515, 636, 95, 95);
 			}
 
 

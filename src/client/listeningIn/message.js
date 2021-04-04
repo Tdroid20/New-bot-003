@@ -71,12 +71,12 @@ module.exports = class {
                           { $set: { "Exp.xp": 0, "Exp.level": level + 1 } }
                         );
 
-                        message.quote(
-                          `${
-                            message.author
-                          }, você acaba de subir para o level **${level + 1}**.`
-                        );
-                        message.react("⬆️");
+                        //message.quote(
+                        //  `${
+                        //    message.author
+                        //  }, você acaba de subir para o level **${level + 1}**.`
+                        //);
+                        //message.react("⬆️");
                       }
 
                       if (message.content.indexOf(prefix) !== 0) return;

@@ -94,6 +94,7 @@ module.exports = class Help extends Command {
         .filter((x, f, y) => y.indexOf(x) === f);
 
       categories.forEach(async (category) => {
+        if(category == "Owner bot") return;
         const comandos = commands
           .filter((x) => x.category === category)
           .sort((a, b) => a.name.localeCompare(b.name))

@@ -3,7 +3,7 @@
 na tela inicial teremos coisas simples
 tais como
 - DASHBOARD
-- logs(se o id for registrado c omo desenvolvedor)[se o id nao for esconder]
+- logs(se o id for registrado como desenvolvedor)[se o id nao for esconder]
 - suport (redirect para o servidor de suporte)
 - invite (redirect para o Oauth2)
 -my servers (mostrar todos os servers que o usuario esta cm prm adm ou dono][se o bot nao tiver aparecer a logo de add])
