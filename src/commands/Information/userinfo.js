@@ -3,6 +3,13 @@ const moment = require("moment");
 const Command = require("../../structures/Command");
 const ClientEmbed = require("../../structures/ClientEmbed");
 
+const badges = [
+  {
+    id: "",
+    emote: ""
+  }
+]
+
 module.exports = class UserInfo extends Command {
   constructor(client) {
     super(client);

@@ -2,6 +2,7 @@ const Discord = require("discord.js");
 const moment = require("moment");
 const Command = require("../../structures/Command");
 const ClientEmbed = require("../../structures/ClientEmbed");
+const a = '`'
 
 module.exports = class ServerInfo extends Command {
   constructor(client) {
@@ -24,61 +25,64 @@ module.exports = class ServerInfo extends Command {
     try {
       let boost =
         message.guild.premiumSubscriptionCount === 0
-          ? "Nenhum Boost"
-          : `${message.guild.premiumSubscriptionCount} Boost(s) ( Level Server: ${message.guild.premiumTier} )`;
+          ? `${a}Nenhum Boost${a}`
+          : `${a}${message.guild.premiumSubscriptionCount} Boost(s) ( Level Server: ${message.guild.premiumTier} )${a}`;
 
       let channels = [
-        `Categoria: ${
+        `<:categoriaHf:827997727643664404>Categoria: ${a}${
           message.guild.channels.cache.filter((x) => x.type == "category").size
-        }`,
-        `Texto: ${
+        }${a}`,
+        `<:chatHf:827580474717241345>Texto: ${a}${
           message.guild.channels.cache.filter((x) => x.type == "text").size
-        }`,
-        `Voz: ${
+        }${a}`,
+        `<:vozHf:827995078798213140>Voz: ${a}${
           message.guild.channels.cache.filter((x) => x.type == "voice").size
-        }`,
+        }${a}`,
       ].join("\n");
 
       const SERVERINFO = new ClientEmbed(author)
 				.setColor('#35FF00')
         .setAuthor(message.guild.name, message.guild.iconURL({ dynamic: true }))
         .addFields(
-          { name: "ID do Servidor:", value: message.guild.id, inline: true },
+          { 
+						name: "<:Hfid:827974200086102016>ID do Servidor:",     value: `${a}${message.guild.id}${a}`,
+					 inline: true,
+					},
           {
-            name: "Propietário:",
-            value: message.guild.owner.user.tag,
+            name: "<:donoHf:827985730168422440>Propietário:",
+            value: `${a}${message.guild.owner.user.tag}${a}`,
             inline: true,
           },
           {
-            name: "Data de Criação:",
-            value: `${moment(message.guild.createdAt).format("L")} ( ${moment(
+            name: "<:data:827597365984231444>Data de Criação:",
+            value: `${a}${moment(message.guild.createdAt).format("L")} ( ${moment(
               message.guild.createdAt
             )
               .startOf("day")
-              .fromNow()} )`,
+              .fromNow()} )${a}`,
           },
           {
-            name: "Data da minha Entrada:",
-            value: `${moment(
+            name: "<:enterHf:827990216597307392>Data da minha Entrada:",
+            value: `${a}${moment(
               message.guild.member(this.client.user.id).joinedAt
             ).format("L")} ( ${moment(
               message.guild.member(this.client.user.id).joinedAt
             )
               .startOf("day")
-              .fromNow()} )`,
+              .fromNow()} )${a}`,
             inline: true,
           },
-          { name: "Boosters", value: boost },
+          { name: "<:booster1:814938154192076850>Boosters", value: boost },
           {
-            name: "Total de Usuários:",
-            value: message.guild.memberCount.toLocaleString(),
+            name: "<:usurioshf:827587802278920272>Total de Usuários:",
+            value: `${a}${message.guild.memberCount.toLocaleString()}${a}`,
             inline: true,
           },
           {
-            name: "Bots:",
-            value: message.guild.members.cache
+            name: "<:botprefix:827607370598580244>Bots:",
+            value: `${a}${message.guild.members.cache
               .filter((x) => x.user.bot)
-              .size.toLocaleString(),
+              .size.toLocaleString()}${a}`,
             inline: true,
           },
           {
