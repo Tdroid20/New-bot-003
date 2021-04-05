@@ -41,3 +41,4 @@ Message.prototype.quote = async function (content, options) {
 var Index = require("./src/index.js");
 
 module.exports = Index;
+ 

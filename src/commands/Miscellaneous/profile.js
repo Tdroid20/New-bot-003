@@ -71,6 +71,9 @@ module.exports = class Profile extends Command {
 			} if(user.badges.includes('phf')) {
         const badgadehfs = await loadImage("./src/assets/img/png/phf.png");
         ctx.drawImage(badgadehfs, 515, 636, 95, 95);
+			} if(user.badges.includes('hkbg')) {
+        const badgadehfs = await loadImage("./src/assets/img/png/hkbg.png");
+        ctx.drawImage(badgadehfs, 830, 25, 400, 200);
 			}
 
 

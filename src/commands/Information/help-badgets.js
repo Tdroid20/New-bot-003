@@ -55,6 +55,10 @@ quer dar sujestoẽs de badgets?, entre no nosso servidor de suporte!
 				 value: "essa badget e entregue aos parceiros da droid tech ou do highframe, para adiquirir basta entrar no servidor do bot e falar com o tdroid2.0."
 			 })
 			 .addFields({
+				 name: "<:HighKingdom:828466041628786700> High Kingdom",
+				 value: "essa badget e adquirida a qeum esta no meu server! ela so pode ser pega se o usuario estiver no meu servidor.**Alerta se o usuario sai a badget e removida do perfil!**"
+			 })
+			 .addFields({
 				 name: "meu servidor:",
 				 value: "[High Kingdom](https://discord.gg/ZBV2cEyyAb)",
 				 inline: true

@@ -130,7 +130,41 @@ client.on('ready', async () => {
   console.log(c.green(`bot: ${client.user.tag} on-line`));
   channel.send(`loginbot:\n:crown:dono: ${user.tag}\n${client.user.tag} está on!`)
 });
+ client.on('guildMemberAdd', async member => {
+	const channel = member.guild.channels.cache.find(ch => ch.name === '781973694728896532');
+	if (!channel) return;
 
+	const canvas = Canvas.createCanvas(700, 250);
+	const ctx = canvas.getContext('2d');
+
+	const background = await Canvas.loadImage('./src/assents/img/jpeg/Welcome.jpeg');
+	ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
+
+	ctx.strokeStyle = '#74037b';
+	ctx.strokeRect(0, 0, canvas.width, canvas.height);
+
+	// Texto um pouco menor colocado acima do nome de exibição do membro
+	ctx.font = '28px sans-serif';
+	ctx.fillStyle = '#ffffff';
+	ctx.fillText('Bem vindo ao High Kingdom,', canvas.width / 2.5, canvas.height / 3.5);
+
+	// Adicione um ponto de exclamação aqui e abaixo
+	ctx.font = applyText(canvas, `${member.displayName}!`);
+	ctx.fillStyle = '#ffffff';
+	ctx.fillText(`${member.displayName}!`, canvas.width / 2.5, canvas.height / 1.8);
+
+	ctx.beginPath();
+	ctx.arc(125, 125, 100, 0, Math.PI * 2, true);
+	ctx.closePath();
+	ctx.clip();
+
+	const avatar = await Canvas.loadImage(member.user.displayAvatarURL({ format: 'jpg' }));
+	ctx.drawImage(avatar, 25, 25, 200, 200);
+
+	const attachment = new Discord.MessageAttachment(canvas.toBuffer(), 'HighFrame-highKingdomServer.png');
+
+	channel.send(`Seja bem vindo ao High Kingdom, ${member}!`, attachment);
+});
 onLoad();
 
 module.exports = {
