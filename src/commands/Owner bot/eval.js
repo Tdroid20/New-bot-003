@@ -1,4 +1,5 @@
 const Command = require("../../structures/Command");
+const owners = ["205884603246837762", "570700558533656586"]
 
 module.exports = class Eval extends Command {
   constructor(client) {
@@ -16,7 +17,7 @@ module.exports = class Eval extends Command {
   }
 
   async run({ message, args, prefix, author }, t) {
-    if(message.author.id !== process.env.OWNER_ID) return;
+    if(!owners.some(e => e == message.author.id)) return;
     if (!args[0]) return;
 
     let litchdelicia = args.join(" ");

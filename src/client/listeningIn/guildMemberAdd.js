@@ -51,7 +51,7 @@ module.exports = class {
           if (ch.total != "null") {
             let channel = guild.channels.cache.get(ch.total);
 
-            channel.setName(`Total: ${guild.memberCount.toLocaleString()}`);
+            channel.setName(`<:userHf:828052673814986802>Total: ${guild.memberCount.toLocaleString()}`);
           }
 
           if (ch.bot != "null") {

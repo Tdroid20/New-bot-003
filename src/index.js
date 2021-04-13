@@ -9,6 +9,9 @@ const Files = require("./utils/Files");
 const c = require("colors");
 const owner = process.env.OWNER_ID
 const team = process.env.TEAM_ID
+const Canvas = require('canvas');
+
+// fim das constantes
 class Main extends Client {
   constructor(options) {
     super(options);
@@ -131,7 +134,7 @@ client.on('ready', async () => {
   channel.send(`loginbot:\n:crown:dono: ${user.tag}\n${client.user.tag} está on!`)
 });
  client.on('guildMemberAdd', async member => {
-	const channel = member.guild.channels.cache.find(ch => ch.name === '781973694728896532');
+	const channel = member.guild.channels.cache.find(ch => ch.name === '「🎈」ʙem-ᴠɪɴᴅos');
 	if (!channel) return;
 
 	const canvas = Canvas.createCanvas(700, 250);

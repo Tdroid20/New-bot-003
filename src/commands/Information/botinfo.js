@@ -34,6 +34,8 @@ module.exports = class Botinfo extends Command {
     const ping = Math.ceil(this.client.ws.ping) + "ms";
     const version = process.version;
     const owner = await this.client.users.fetch(process.env.OWNER_ID);
+    const Discord = require('discord.js')
+    const client = new Discord.Client()
 
     //===============> Start Request DB <===============//
 
@@ -53,8 +55,8 @@ module.exports = class Botinfo extends Command {
 
       .setAuthor(` ℹ️ Minhas Informações`, this.client.user.displayAvatarURL())
 			.setColor('#35FF00')
-			.setTitle('em atualização!')
-      .addFields(
+			.setTitle('Droid tech Company ┃ Highframe')
+			.addFields(
         {
           name: "<:staff:827404163126263808>Meu Dono",
           value: `**${owner.tag}** || **[${owner.username}](https://youtube.com/c/tdroid20youtuber)**`,
@@ -72,6 +74,7 @@ module.exports = class Botinfo extends Command {
           value: `[Meu Convite](https://discord.com/oauth2/authorize?client_id=821548564421148692&scope=bot&permissions=2147483647)\n[meu servidor](https://discord.gg/s3UqkTqMs3)\n[servidor parceiro](https://discord.gg/QMFEcFEcn4)`,
         }
       )
+      .setImage("https://i.imgur.com/boNLfCT.png")
       .setThumbnail(
         this.client.user.displayAvatarURL({ format: "jpg", size: 2048 })
       );

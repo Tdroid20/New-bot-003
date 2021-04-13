@@ -5,7 +5,7 @@
 const User = require("../../database/Schemas/User");
 const Command = require("../../structures/Command");
 
-module.exports = class Badges extends Command {
+module.exports = class ClaimHk extends Command {
   constructor(client) {
     super(client);
     this.client = client;
@@ -20,6 +20,20 @@ module.exports = class Badges extends Command {
   }
 
   async run({ message, args, prefix, author }, t) {
+      
+      if(message.guild.id !== process.env.GUILD_ID) {
+        return message.quote("É necessário estar no server da High Kingdom para resgatar essa insignea");
+      }
+
+      if(args[0] == "hk") {
+        const query = await User.findOne({ idU: message.author.id }).exec();
+        
+        if(!res.badges) res.badges = [];
+        res.badges.push("hkbg");
+        await res.save();
+
+      }
+      
       /*
 			if (message.guild.id !== process.env.GUILD_ID) return;
          const usuarioAlvo = message.author;

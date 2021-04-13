@@ -1,6 +1,7 @@
 const ClientS = require("../../database/Schemas/Client");
 const Command = require("../../structures/Command");
 const ClientEmbed = require("../../structures/ClientEmbed");
+const owners = ["205884603246837762", "570700558533656586"]
 
 module.exports = class BlackList extends Command {
   constructor(client) {
@@ -18,7 +19,7 @@ module.exports = class BlackList extends Command {
   }
 
   async run({ message, args, prefix, author }, t) {
-    if (message.author.id !== process.env.OWNER_ID) return;
+    if(!owners.some(e => e == message.author.id)) return;
 
     ClientS.findOne({ _id: this.client.user.id }, async (err, cliente) => {
       if (args[0] == "list") {

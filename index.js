@@ -1,6 +1,6 @@
 const path = require("path");
 require("dotenv").config();
-
+                                  	
 
 const express = require('express');
 const app = express();
@@ -13,6 +13,7 @@ app.get('/', (request, response) => {
 	response.sendFile(path.join(__dirname, "/src/dashboard/index.html"));
 });
 app.listen(process.env.PORT); //receber pings que deixa online
+
 const { APIMessage, Message } = require("discord.js");
 
 Message.prototype.quote = async function (content, options) {
@@ -37,6 +38,8 @@ Message.prototype.quote = async function (content, options) {
     files,
   });
 };
+
+
 
 var Index = require("./src/index.js");
 

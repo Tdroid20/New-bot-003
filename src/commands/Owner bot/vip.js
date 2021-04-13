@@ -3,6 +3,7 @@ const ms = require("ms");
 const Emojis = require("../../utils/Emojis");
 const User = require("../../database/Schemas/User");
 const moment = require("moment");
+const owners = ["205884603246837762", "570700558533656586"]
 require("moment-duration-format");
 
 module.exports = class Vip extends Command {

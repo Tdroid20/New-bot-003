@@ -4,29 +4,6 @@ const ClientEmbed = require("../../structures/ClientEmbed");
 const User = require("../../database/Schemas/User");
 const Badges = require("../../utils/Badges");
 
-const badges = [
-  {
-    id: "hfenvent",
-    name: "Highframe Event",
-    emote: "<:hf:827404073975414804>"
-  },
-  {
-    id: "droid-tech",
-    name: "Droid Tech",
-    emote: "<:dtc:814899023684042782>"
-  },
-  {
-    id: "developer",
-    name: "Highframe Developer",
-    emote: "<:staff:827404163126263808>"
-  },
-  {
-    id: "helperhf",
-    name: "Highframe Contributor",
-    emote: "<:staffHelper:827543068134998017>"
-  },
-];
-
 module.exports = class UserInfo extends Command {
 
   constructor(client) {
@@ -47,9 +24,11 @@ module.exports = class UserInfo extends Command {
     moment.locale("pt-BR");
 
     try {
-        const usuarioAlvo = this.client.users.cache.get(args[0]) || message.mentions.members.first() || message.author;
+        const usuarioAlvo = message.guild.member(
+					this.client.users.cache.get(args[0]) || message.mentions.members.first() || message.author);
+
         const membroAlvo = message.guild.member(usuarioAlvo.id);
-        // const rolesAlvo = membroAlvo.roles.cache.filter()
+        //const rolesAlvo = membroAlvo.roles.cache.filter()
         const device = this.device(usuarioAlvo);
         let presence = "Não está jogando nada";
         const joined = `${moment(membroAlvo.joinedAt).format("L")} (${moment(membroAlvo.joinedAt).startOf("day").fromNow()})`; 
@@ -60,28 +39,38 @@ module.exports = class UserInfo extends Command {
         }
 
         const query = await User.findOne({ idU: usuarioAlvo.id }).exec();
-
+        let badges = ""
+        
+        for(const badge of query.badges) {
+          for(const dbBadges of Badges) {
+            if(dbBadges.id == badge) {
+              badges = badges+`${dbBadges.emote} `;
+            }
+          }
+        }
+				
         const embed = new ClientEmbed(message.author)
             .setColor('#35FF00')
             .setAuthor(usuarioAlvo.username, usuarioAlvo.displayAvatarURL({ dynamic: true }))
             .addFields(
                 { name: "Jogando", value: `\`\`\`diff\n- ${presence}\`\`\`` },
-                { name: "Nome do Usuário", value: usuarioAlvo.tag, inline: true },
+                { name: "<:UserHf:830534196904198177>Nome do Usuário", value: usuarioAlvo.tag, inline: true },
                 {
-                    name: "Nickname no Servidor",
+                    name: "<:UserHf:830534196904198177>Nickname no Servidor",
                     value: !!membroAlvo.nickname ? membroAlvo.nickname : "Nenhum Nickname",
                     inline: true,
                 },
-                { name: "ID do Usuário", value: usuarioAlvo.id },
-                { name: "Conta Criada", value: created, inline: true },
-    
-                { name: "Entrada no Servidor", value: joined, inline: true },
+                { name: "<:idHf:828052610208235550>ID do Usuário", value: usuarioAlvo.id },
+                { name: "<:data:828052642651177021>Conta Criada", value: created, inline: true },    
+                { name: "<:data:828052642651177021>Entrada no Servidor", value: joined, inline: true },
                 {
-                    name: "Dispositivo",
+                    name: ":mobile_phone:Dispositivo",
                     value: String(device).replace("null", "Nenhum"),
                 },
             )
             .setThumbnail(usuarioAlvo.displayAvatarURL({ dynamic: true }));
+
+            badges ? embed.addField("Insigneas", badges, true) : "";
 
             message.quote(embed)
     } catch (e) {
@@ -98,14 +87,12 @@ module.exports = class UserInfo extends Command {
     let deviceList = devices.map((x) => {
         switch(x) {
             case "desktop": 
-                return "Computador" 
+                return "<:pcHf:830534126565064836>Computador" 
             case "mobile":
-                return "Celular"
-            default:
-                return "Bot"
+                return "<:mobHf:830534048271171594>Celular"
         }
     });
 
-    return deviceList.join(" - ");
+    return deviceList.join(" ");
   }
 };

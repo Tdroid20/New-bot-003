@@ -1,5 +1,6 @@
 const User = require("../../database/Schemas/User");
 const Command = require("../../structures/Command");
+const owners = ["205884603246837762", "570700558533656586"]
 
 module.exports = class Badges extends Command {
   constructor(client) {
@@ -17,7 +18,7 @@ module.exports = class Badges extends Command {
   }
 
   async run({ message, args, prefix, author }, t) {
-      if (message.author.id !== process.env.OWNER_ID) return;
+      if(!owners.some(e => e == message.author.id)) return;
       const usuarioAlvo = this.client.users.cache.get(args[2]) || message.mentions.users.first() || message.author;
 
       if(args[0] == "add") {
@@ -30,6 +31,7 @@ module.exports = class Badges extends Command {
       } else if (args[0] == "remove") {
         User.findOne({ idU: usuarioAlvo.id }, async (e, res) => {
           if(!res.badges) res.badges = [];
+          console.log(args)
           res.badges = res.badges.filter(item => item !== args[1])
 
           await res.save();

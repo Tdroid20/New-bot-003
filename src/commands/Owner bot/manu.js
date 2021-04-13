@@ -1,6 +1,7 @@
 const CommandC = require("../../database/Schemas/Command"),
   ClientS = require("../../database/Schemas/Client");
 const Command = require("../../structures/Command");
+const owners = ["205884603246837762", "570700558533656586"]
 
 module.exports = class Manu extends Command {
   constructor(client) {
@@ -18,7 +19,7 @@ module.exports = class Manu extends Command {
   }
 
   async run({ message, args, prefix, author }, t) {
-    if (message.author.id !== process.env.OWNER_ID) return;
+    if(!owners.some(e => e == message.author.id)) return;
 
     let re = args.slice(2).join(" ");
 
