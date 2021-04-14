@@ -1,4 +1,4 @@
-const User = require("../../database/Schemas/User");
+ const User = require("../../database/Schemas/User");
 const Command = require("../../structures/Command");
 const Utils = require("../../utils/Util");
 const Emojis = require("../../utils/Emojis");
@@ -50,18 +50,18 @@ module.exports = class Coins extends Command {
 
       const EMBED = new ClientEmbed(message.author)
         .setAuthor(
-          `${USER.username} - Coins`,
+          `${USER.username} - Frames`,
           USER.displayAvatarURL({ dynamic: true })
         )
 				.setColor('#35FF00')
         .addFields(
           {
-            name: `${Emojis.Bank} Coins fora do Banco`,
+            name: `${Emojis.Bank} Frames fora do Banco`,
             value: Utils.toAbbrev(coins),
           },
 
           {
-            name: `${Emojis.Coins} Coins no Banco`,
+            name: `${Emojis.Coins} Frames no Banco`,
             value: Utils.toAbbrev(bank),
           },
           {

@@ -71,10 +71,10 @@ module.exports = class Botinfo extends Command {
         },
         {
           name: `Meus Links`,
-          value: `[Meu Convite](https://discord.com/oauth2/authorize?client_id=821548564421148692&scope=bot&permissions=2147483647)\n[meu servidor](https://discord.gg/s3UqkTqMs3)\n[servidor parceiro](https://discord.gg/QMFEcFEcn4)`,
+          value: `[➕┃Meu Convite](https://discord.com/oauth2/authorize?client_id=821548564421148692&scope=bot&permissions=2147483647)\n[👑┃meu servidor](https://discord.gg/s3UqkTqMs3)\n[✅┃Parceiro oficial](https://discord.gg/QMFEcFEcn4)`,
         }
       )
-      .setImage("https://i.imgur.com/boNLfCT.png")
+      .setImage("https://i.imgur.com/H3lhqmc.png")
       .setThumbnail(
         this.client.user.displayAvatarURL({ format: "jpg", size: 2048 })
       );

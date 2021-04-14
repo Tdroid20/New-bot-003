@@ -41,7 +41,7 @@ module.exports = class Work extends Command {
             `${message.author}, você deve esperar **${moment
               .duration(cooldown - (Date.now() - work))
               .format("h [horas], m [minutos] e s [segundos]")
-              .replace("minsutos", "minutos")}** até poder trabalhar novamente`
+              .replace("minutos", "minutos")}** até poder trabalhar novamente`
           );
         } else {
           if (user.work.exp + xp > nextlevel) {
@@ -67,7 +67,7 @@ module.exports = class Work extends Command {
             message.quote(
               `${
                 message.author
-              }, você trabalhou com sucesso e obteve **${money.toLocaleString()} coins** e **${xp} de XP**.`
+              }, você trabalhou com sucesso e obteve **${money.toLocaleString()} frames** e **${xp} de XP**.`
             );
             await User.findOneAndUpdate(
               { idU: message.author.id },
@@ -180,7 +180,7 @@ module.exports = class Work extends Command {
         );
 
         ctx.fillText(user.work.level, 390, 340);
-        ctx.fillText(`${money.toLocaleString()} coins`, 390, 500);
+        ctx.fillText(`${money.toLocaleString()} frames`, 390, 500);
 
         //========================// Import ProgressBar //========================//
 
