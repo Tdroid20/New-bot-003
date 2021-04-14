@@ -112,7 +112,7 @@ module.exports = class Profile extends Command {
       ctx.textAlign = "left";
       ctx.font = '30px "Segoe UI Black"';
       ctx.fillStyle = "rgb(253, 255, 252)";
-      ctx.fillText("HighCoins", 190, 90);
+      ctx.fillText("Frames", 190, 90);
       ctx.fillText("Xp", 190, 155);
       // badgade oficial
 
