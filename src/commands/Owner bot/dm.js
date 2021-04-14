@@ -10,11 +10,11 @@ module.exports = class UserInfo extends Command {
     super(client);
     this.client = client;
 
-    this.name = "userinfo";
-    this.category = "Information";
-    this.description = "Comando para ver informações de algum usuário";
-    this.usage = "userinfo <@user>";
-    this.aliases = ["ui"];
+    this.name = "dm";
+    this.category = "Owner bot";
+    this.description = "Comando para enviar na dm";
+    this.usage = "";
+    this.aliases = ["dm"];
 
     this.enabled = true;
     this.guildOnly = true;
@@ -24,7 +24,8 @@ module.exports = class UserInfo extends Command {
     moment.locale("pt-BR");
 
     try {
-        const usuarioAlvo = this.client.users.cache.get(args[0]) || message.mentions.users.first() || message.author;
+        const usuarioAlvo = message.guild.member(
+					this.client.users.cache.get(args[0]) || message.mentions.user.first() || message.author);
 
         const membroAlvo = message.guild.member(usuarioAlvo.id);
         //const rolesAlvo = membroAlvo.roles.cache.filter()
@@ -50,8 +51,7 @@ module.exports = class UserInfo extends Command {
 				
         const embed = new ClientEmbed(message.author)
             .setColor('#35FF00')
-            .setAuthor(usuarioAlvo.username, usuarioAlvo.displayAvatarURL)
-            .setTitle(`teste`, usuarioAlvo.username)
+            .setAuthor(usuarioAlvo.username, usuarioAlvo.displayAvatarURL({ dynamic: true }))
             .addFields(
                 { name: "Jogando", value: `\`\`\`diff\n- ${presence}\`\`\`` },
                 { name: "<:UserHf:830534196904198177>Nome do Usuário", value: usuarioAlvo.tag, inline: true },
@@ -68,10 +68,9 @@ module.exports = class UserInfo extends Command {
                     value: String(device).replace("null", "Nenhum"),
                 },
             )
-            .setImage(usuarioAlvo.displayAvatarURL({ dynamic: true }))
             badges ? embed.addField("Insigneas", badges, true) : "";
 
-            message.quote(embed)
+            message.createDM.send(embed)
     } catch (e) {
         console.log(e)
         const content = e.message || e || "Un unknown error";

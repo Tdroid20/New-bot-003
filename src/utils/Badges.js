@@ -18,5 +18,30 @@ module.exports = [
     id: "helperhf",
     name: "Highframe Contributor",
     emote: "<:staffHelper:827543068134998017>"
+  }, 
+  {
+    id: "hfbg",
+    name: "Highframe Event",
+    emote: "<:hf:827404073975414804>"
+  },
+    {
+    id: "rehash",
+    name: "Rehash event",
+    emote: "<:Rehash:827404256473514035>"
+  },
+    {
+    id: "suportint",
+    name: "suporte inicial Highframe",
+    emote: "<:suportinit:828053281158201384>"
+  },
+  {
+   id: "phf",
+   name: "parceiro oficial",
+   emote: "<:partnerHf:828114179117285377>"
+  },
+  {
+  id: "hkbg",
+  name: "High Kingdom badges",
+  emote: "<:HighKingdom:828466041628786700>"
   },
 ];
