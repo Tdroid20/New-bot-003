@@ -38,7 +38,7 @@ module.exports = class Botinfo extends Command {
 				},
         {
           name: `Meus Links`,
-          value: `[youtube](https://youtube.com/c/tdroid20youtuber)\n[instagram](https://www.instagram.com/tdroid2.0/?igshid=ijjucmonsf5a)\n[meu codigo do kwai](https://m.kwai.app/s/IctCE062?share_id=ANDROID_3e2ee1fc435bdfd6_1617394509576)\n[meu servidor](https://discord.gg/BB98HYPM8G)\n[br dar uma força no canal do meu amigo mercena](https://www.youtube.com/user/KoringaMultiplayer)`,
+          value: `[▶️┃youtube](https://youtube.com/c/tdroid20youtuber)\n[📷┃instagram](https://www.instagram.com/tdroid2.0/?igshid=ijjucmonsf5a)\n[💰┃meu codigo do kwai](https://m.kwai.app/s/IctCE062?share_id=ANDROID_3e2ee1fc435bdfd6_1617394509576)\n[👑┃meu servidor](https://discord.gg/BB98HYPM8G)\n[▶️┃canal do meu amigo mercena](https://www.youtube.com/user/KoringaMultiplayer)`,
         }
       )
       .setThumbnail(

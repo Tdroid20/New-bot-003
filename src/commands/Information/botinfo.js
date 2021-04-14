@@ -71,9 +71,15 @@ module.exports = class Botinfo extends Command {
         },
         {
           name: `Meus Links`,
-          value: `[➕┃Meu Convite](https://discord.com/oauth2/authorize?client_id=821548564421148692&scope=bot&permissions=2147483647)\n[👑┃meu servidor](https://discord.gg/s3UqkTqMs3)\n[✅┃Parceiro oficial](https://discord.gg/QMFEcFEcn4)`,
+          value: `[➕┃Meu Convite](https://discord.com/oauth2/authorize?client_id=821548564421148692&scope=bot&permissions=2147483647)\n[👑┃meu servidor](https://discord.gg/s3UqkTqMs3)\n[▶️┃meu canal](https://youtube.com/channel/UCcmUFs27t3qkgDIHg2NK6Zg)\n[📷┃meu Instagram](https://instagram.com/highframe_oficial?igshid=19ch0eg895bnh)`,
         }
       )
+      .addFields(
+        {
+          name: `Parcerias oficias`,
+          value: `[✅┃Parceiro oficial](https://discord.gg/QMFEcFEcn4)\n[▶️┃Canal do meu amigo Mercena](https://youtube.com/c/Mercenagta)`
+        }
+        )
       .setImage("https://i.imgur.com/H3lhqmc.png")
       .setThumbnail(
         this.client.user.displayAvatarURL({ format: "jpg", size: 2048 })
