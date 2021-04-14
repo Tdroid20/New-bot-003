@@ -1,5 +1,14 @@
 {
   "help": {
-    "title": "fafassfa"
+    "title": "❓Bot Help Center"
+  },
+  "welcome": {
+    "channel": {
+      "sucess": "the channel **<#{{channel}}>** has been successfully set as a welcome channel"
+    }
+  },
+  "deposit": {
+    "noArgs": "correct way to use the command: **{{prefix}}deposit <amount/all>**",
+    "sucess": "you deposited **{{coins}} frames** successfully."
   }
 }

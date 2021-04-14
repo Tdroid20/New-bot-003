@@ -1,6 +1,6 @@
 {
   "help": {
-    "title": "Central de Ajuda do Bot - Testando"
+    "title": "❓Central de Ajuda do Bot"
   },
   "welcome": {
     "channel": {
@@ -9,6 +9,6 @@
   },
   "deposit": {
     "noArgs": "modo correto de utilizar o comando: **{{prefix}}depositar <quantia/all>**",
-    "sucess": "você depositou **{{coins}} coins** com sucesso."
+    "sucess": "você depositou **{{coins}} frames** com sucesso."
   }
 }
