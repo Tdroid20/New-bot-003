@@ -54,13 +54,13 @@ module.exports = class Botinfo extends Command {
 		const usuarioAlvo = this.client.users.cache.get(args[0]) || message.mentions.users.first() || message.author;
     const EMBED = new ClientEmbed(author)
 
-      .setAuthor(` ℹ️ Minhas Informações`, this.client.user.displayAvatarURL())
+      .setAuthor(`🤝poderia me ajudar?`, this.client.user.displayAvatarURL())
 			.setColor('#35FF00')
 			.setTitle('Droid tech Company ┃ Highframe')
-			.setDescription(`olá ${usuarioAlvo}! meu nome é highframe! sou uma bot oficial da empresa droid tech company, bem estou aqui para peddir seu apoio pois estou precisando ser convidado para 100 servidores para poder ganhar meu verificado assim mais pessoas se sintiram seguras para me adicionar em mais servidore.\n\n **<:donoHf:827985730168422440>oque sou?**\n> simples sou o primeiro bot(robo) influenciador do mundo na plataforma discord! eu tenho como objetivo chegar no top 10 bots mais usados! peço que me ajuda a atingir essa meta!\n\n<:comandos:827580381380476929>oque tenho de interessante?\n> bem da para constar que não e aquela novidade mais, um sistema de badges oficial, ou seja temos nossas proprias badges igual o discord, e como ele tenho insignas que irão se tornar raras como a **highframe event** que sera disponivel resgatar apenas ate o bot bater a meta de 100 guilds. entre outras\n\n<:protectBot:814898175046451200> ele ira derrubar meu server?\n> claro que não! meu objetivo e crescer e ajudar e entreter a todos, nunca faria nada tão baixo assim, e caso ache mais seguro pode entrar no meu servidor para testar meus comandos.\n\n bem era isso que tinha a dizer, muito obrigado por ler e peço que possa me ajudar.
+			.setDescription(`olá ${usuarioAlvo}! meu nome é highframe! sou uma bot oficial da empresa droid tech company, bem estou aqui para pedir seu apoio pois estou precisando ser convidado para 100 servidores para poder ganhar meu verificado assim mais pessoas se sintiram seguras para me adicionar em mais servidore.\n\n **<:donoHf:827985730168422440>oque sou?**\n> simples sou o primeiro bot(robo) influenciador do mundo na plataforma discord! eu tenho como objetivo chegar no top 10 bots mais usados! peço que me ajuda a atingir essa meta!\n\n<:comandos:827580381380476929>oque tenho de interessante?\n> bem da para constar que não e aquela novidade mais, um sistema de badges oficial, ou seja temos nossas proprias badges igual o discord, e como ele tenho insignas que irão se tornar raras como a **highframe event** que sera disponivel resgatar apenas ate o bot bater a meta de 100 guilds. entre outras\n\n<:protectBot:814898175046451200> ele ira derrubar meu server?\n> claro que não! meu objetivo e crescer e ajudar e entreter a todos, nunca faria nada tão baixo assim, e caso ache mais seguro pode entrar no meu servidor para testar meus comandos.\n\n bem era isso que tinha a dizer, muito obrigado por ler e peço que possa me ajudar.
 			
 			
-			<:youtube:821222663670071316>te vejo nos videios e nois<:HighFrame:832094585786204170>`)
+			<:youtube:821222663670071316>te vejo nos videos e nois<:HighFrame:832094585786204170>`)
 			.addFields(
 				{
 					name: `<:staff:827404163126263808>desenvolvedor`,

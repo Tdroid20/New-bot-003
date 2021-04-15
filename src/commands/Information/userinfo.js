@@ -51,7 +51,7 @@ module.exports = class UserInfo extends Command {
         const embed = new ClientEmbed(message.author)
             .setColor('#35FF00')
             .setAuthor(usuarioAlvo.username, usuarioAlvo.displayAvatarURL)
-            .setTitle(`<:infoHf:832115931480195094> informações de `, usuarioAlvo.username)
+            .setTitle(`<:infoHf:832115931480195094> informações do usuário`)
             .addFields(
                 { name: "Jogando", value: `\`\`\`diff\n- ${presence}\`\`\`` },
                 { name: "<:UserHf:830534196904198177>Nome do Usuário", value: usuarioAlvo.tag, inline: true },
@@ -68,7 +68,7 @@ module.exports = class UserInfo extends Command {
                     value: String(device).replace("null", "Nenhum"),
                 },
             )
-            .setImage(usuarioAlvo.displayAvatarURL({ dynamic: true }))
+            .setThumbnail(usuarioAlvo.displayAvatarURL({ dynamic: true }))
             badges ? embed.addField("Insigneas", badges, true) : "";
 
             message.quote(embed)

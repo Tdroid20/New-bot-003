@@ -24,7 +24,7 @@ module.exports = class Botinfo extends Command {
 		const owner = await this.client.users.fetch(process.env.OWNER_ID);
 		const EMBED = new ClientEmbed(author)
 
-      .setAuthor(` ℹ️ Informações do meu dono`)
+      .setTitle(`<:infoHf:832115931480195094>Informações do meu dono`)
 			.setColor('#35FF00')
       .addFields(
         {
