@@ -51,7 +51,7 @@ module.exports = class UserInfo extends Command {
         const embed = new ClientEmbed(message.author)
             .setColor('#35FF00')
             .setAuthor(usuarioAlvo.username, usuarioAlvo.displayAvatarURL)
-            .setTitle(`teste`, usuarioAlvo.username)
+            .setTitle(`<:infoHf:832115931480195094> informações de `, usuarioAlvo.username)
             .addFields(
                 { name: "Jogando", value: `\`\`\`diff\n- ${presence}\`\`\`` },
                 { name: "<:UserHf:830534196904198177>Nome do Usuário", value: usuarioAlvo.tag, inline: true },

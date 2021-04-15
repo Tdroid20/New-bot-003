@@ -42,7 +42,7 @@ module.exports = class ServerInfo extends Command {
 
       const SERVERINFO = new ClientEmbed(author)
 				.setColor('#35FF00')
-        .setAuthor(message.guild.name, message.guild.iconURL({ dynamic: true }))
+        .setTitle(`<:infoHf:832115931480195094> informações de ${message.guild.name}`)
         .addFields(
           { 
 						name: "<:Hfid:827974200086102016>ID do Servidor:",     value: `${a}${message.guild.id}${a}`,

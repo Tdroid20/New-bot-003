@@ -53,7 +53,7 @@ module.exports = class Botinfo extends Command {
 
     const EMBED = new ClientEmbed(author)
 
-      .setAuthor(` ℹ️ Minhas Informações`, this.client.user.displayAvatarURL())
+      .setAuthor(` <:infoHf:832115931480195094> Minhas Informações`, this.client.user.displayAvatarURL())
 			.setColor('#35FF00')
 			.setTitle('Droid tech Company ┃ Highframe')
 			.addFields(
