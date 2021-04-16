@@ -47,6 +47,6 @@ module.exports = [
     {
   id: "verify",
   name: "usuário verificado",
-  emote: "<:verificadoHf:832364570982350858>"
+  emote: "<:verifyHf:832451009849589800>"
   },
 ];
