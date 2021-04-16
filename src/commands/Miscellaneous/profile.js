@@ -74,6 +74,9 @@ module.exports = class Profile extends Command {
 			} if(user.badges.includes('hkbg')) {
         const badgadehfs = await loadImage("./src/assets/img/png/hkbg.png");
         ctx.drawImage(badgadehfs, 830, 25, 400, 200);
+			} if(user.badges.includes('verify')) {
+        const badgadehfs = await loadImage("./verify.png");
+        ctx.drawImage(badgadehfs, 400, 10, 56, 36);
 			}
 
 
@@ -104,7 +107,7 @@ module.exports = class Profile extends Command {
           ? USER.username.slice(0, 20) + "..."
           : USER.username,
         180,
-        50
+        60
       );
 
       // Titles

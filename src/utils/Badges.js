@@ -44,4 +44,9 @@ module.exports = [
   name: "High Kingdom badges",
   emote: "<:HighKingdom:828466041628786700>"
   },
+    {
+  id: "verify",
+  name: "usuário verificado",
+  emote: "<:verificadoHf:832364570982350858>"
+  },
 ];

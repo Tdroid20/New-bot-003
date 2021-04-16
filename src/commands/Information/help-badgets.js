@@ -58,6 +58,12 @@ quer dar sujestoẽs de badgets?, entre no nosso servidor de suporte!
 				 name: "<:HighKingdom:828466041628786700> High Kingdom",
 				 value: "essa badget e adquirida a qeum esta no meu server! ela so pode ser pega se o usuario estiver no meu servidor.**Alerta se o usuario sai a badget e removida do perfil!**"
 			 })
+			 .addField(
+				 {
+					 name: `<:verificadoHf:832364570982350858> verificado`,
+					 value: `esa badget e entregue aos influenciadores seja **youtube,twitch,highNetwork,highInfluencer,booyah!,instagram,kwai,tick tock e etc..** qualqier influenciodor que cumpra os requisitos pode adquirir o verificado,\nvale lembrar que um highInfluencere os youtubers e stremears que divulgam o bot em seus videos e lives.\nmais informaçoẽs entre em nosso server`
+				 }
+			 )
 			 .addFields({
 				 name: "meu servidor:",
 				 value: "[High Kingdom](https://discord.gg/ZBV2cEyyAb)",
