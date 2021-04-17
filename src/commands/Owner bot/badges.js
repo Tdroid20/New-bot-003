@@ -146,7 +146,7 @@ module.exports = class Badges extends Command {
         const deniedms = await new discord.MessageEmbed()
 					  .setAuthor(`aviso para ${deniedU.tag}`,usuarioAlvo.displayAvatarURL({ format: "jpg", size: 2048 }))	
 						.setTitle(`<:infoHf:832115931480195094> aviso!`)
-						.setColor('#35FF00')
+						.setColor('#FF0000')
 						.setDescription(`olá **${deniedU}**! infelizmente venho dizer que seu pedido de verificação foi negado pelo **${entregador}**, desculpe dá essa notícia, mais voce pode tentar novamente ou pode perguntar o motivo da recusa para o ${entregador}`)
 						.addFields(
 							{
