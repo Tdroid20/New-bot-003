@@ -36,16 +36,13 @@ module.exports = class Badgeinfo extends Command {
 > essa insigna é entregue apenas para quem trabalha na droid tech company, então ela acaba se tornando rara pelo fato de que poucos aceitão fazer parte da equipe
 
 			<:staff:827404163126263808> highframe developer
-> essa é outra insigna rara que somente quem trabalha ou contribuindo no bot consegue ter ela em seu perfil do bot, ela tem atualmente 2 versoẽs, 
+> essa é outra insigna rara que somente quem trabalha ou contribui no bot consegue ter ela em seu perfil do bot, ela tem atualmente 3 versoẽs, 
 
 > <:staff:827404163126263808> verde: entregue a aqueles que trabalham no bot atualmente. 
 > <:staffHelper:827543068134998017> amarela: entregue a aqueles que deram uma contribuiçao na criação do bot
-
+> <:sthk:834970274814230539> ciano: entre a aqueles que sao satffs do server oficial do bot(high kingdom)
 			<:Rehash:827404256473514035> Rehash
-essa insigna e entrgue a aqueles a chegar ao level 18 dentro do server **REHASH**, entre no server da Rehash e alcance level 18 e resgate sua badget${b}(essa badget tera um prazo para resgatar, aproveite o mais rapido possivel)${b}
-			
-		<:suportinit:828053281158201384>suporte highframe
-essa badget e entregue a aqueles que ajudam o bot com donation e premium, todos que tem essa insigna em seu perfil hf ajudou o bot, ${b}alerta! essa insigna e por tempo de resgate limitado, mais quem adquiriu ela tera para sempre em seu perfil, se o usuario pedir reembolso ou algo do tipo ela sera removida.${b}  
+essa insigna e entrgue a aqueles a chegar ao level 18 dentro do server **REHASH**, entre no server da Rehash e alcance level 18 e resgate sua badget${b}(essa badget tera um prazo para resgatar, aproveite o mais rapido possivel)${b}  
 
 digite ${prefix}bgi e veja suas badgets
 quer dar sujestoẽs de badgets?, entre no nosso servidor de suporte!
@@ -61,9 +58,14 @@ quer dar sujestoẽs de badgets?, entre no nosso servidor de suporte!
 			 .addField(
 				 {
 					 name: `<:verificadoHf:832364570982350858> verificado`,
-					 value: `esa badget e entregue aos influenciadores seja **youtube,twitch,highNetwork,highInfluencer,booyah!,instagram,kwai,tick tock e etc..** qualqier influenciodor que cumpra os requisitos pode adquirir o verificado,\nvale lembrar que um highInfluencere os youtubers e stremears que divulgam o bot em seus videos e lives.\nmais informaçoẽs entre em nosso server`
+					 value: `esa badget e entregue aos influenciadores seja **youtube,twitch,highNetwork,highInfluencer,booyah!,instagram,kwai,tick tock e etc..** qualqier influenciodor que cumpra os requisitos pode adquirir o verificado,vale lembrar que um highInfluencere os youtubers e stremears que divulgam o bot em seus videos e lives.mais informaçoẽs entre em nosso server`,
+					 inline: true
 				 }
 			 )
+			 .addFields({
+				 name: `<:suportinit:828053281158201384>suporte highframe`,
+				 value: `essa badget e entregue a aqueles que ajudam o bot com donation e premium, todos que tem essa insigna em seu perfil hf ajudou o bot, ${b}alerta! essa insigna e por tempo de resgate limitado, mais quem adquiriu ela tera para sempre em seu perfil, se o usuario pedir reembolso ou algo do tipo ela sera removida.${b}`
+			 })
 			 .addFields({
 				 name: "meu servidor:",
 				 value: "[High Kingdom](https://discord.gg/ZBV2cEyyAb)",

@@ -3,7 +3,7 @@ const Command = require("../../structures/Command");
 const owners = ["205884603246837762", "570700558533656586", "826287242154606604"]
 const discord = require('discord.js')
 const client = new discord.Client()
-
+const send = require("discord.js")
 module.exports = class Badges extends Command {
   constructor(client) {
     super(client);
@@ -31,25 +31,6 @@ module.exports = class Badges extends Command {
         })
 				if(args[1] == "verify") {
 					
-//========================// mensagem no canal //========================//
-        	const canal = '832439376205971476'
-					const chl = await new discord.MessageEmbed()
-						
-						.setColor('#35FF00')
-						.setTitle('temos um novo influencer verificado!')
-						.setDescription(`${usuarioAlvo} acaba de se tornar um usuario verificado! seja bem vindo a nossa equipe de frames verificados, espero que goste!`)
-						.addFields(
-							{
-								name: `<:verifyHf:832451009849589800>influencer:`,
-								value: `**${usuarioAlvo.tag}**`, inline: true
-							},
-							)
-						.setThumbnail(usuarioAlvo.displayAvatarURL({ dynamic: true }))
-						.setFooter(`Tdroid2.0#1542┃Droid tech company oficial`)
-						.setTimestamp()
-//enviando
-
-					client.channels.cache.get('832439376205971476').send(chl)
 //========================// mensagem na dm //========================//
 
          

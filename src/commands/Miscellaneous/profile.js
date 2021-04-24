@@ -49,11 +49,16 @@ module.exports = class Profile extends Command {
 			//========================// Import badgade //========================//
 
 			
-
-      if(user.badges.includes("developer")) {
+      if(user.badges.includes("sthk")) {
+        const badgadehfs = await loadImage("./src/assets/img/png/staffhk.png");
+        ctx.drawImage(badgadehfs, 227, 650, 50, 50);
+      } if(user.badges.includes("developer")) {
         const badgadehfs = await loadImage("./src/assets/img/png/bgstaff.png");
         ctx.drawImage(badgadehfs, 227, 650, 50, 50);
-      } if(user.badges.includes("hfbg")) {
+      } if(user.badges.includes("helperhf")) {
+        const badgadehfs = await loadImage("./src/assets/img/png/helperhf.png");
+        ctx.drawImage(badgadehfs, 227, 650, 50, 50);
+			} if(user.badges.includes("hfbg")) {
         const badgadehfs = await loadImage("./src/assets/img/png/hfbg.png");
         ctx.drawImage(badgadehfs, 270, 650, 50, 60);
       } if(user.badges.includes("droid-tech")) {
@@ -62,9 +67,6 @@ module.exports = class Profile extends Command {
 			} if(user.badges.includes("rehash")) {
         const badgadehfs = await loadImage("./src/assets/img/png/rhbg.png");
         ctx.drawImage(badgadehfs, 370, 645, 70, 70);
-			} if(user.badges.includes("helperhf")) {
-        const badgadehfs = await loadImage("./src/assets/img/png/helperhf.png");
-        ctx.drawImage(badgadehfs, 227, 650, 50, 50);
 			} if(user.badges.includes('suportint')) {
         const badgadehfs = await loadImage("./src/assets/img/png/suportint.png");
         ctx.drawImage(badgadehfs, 450, 645, 70, 70);
@@ -76,7 +78,7 @@ module.exports = class Profile extends Command {
         ctx.drawImage(badgadehfs, 830, 25, 400, 200);
 			} if(user.badges.includes('verify')) {
         const badgadehfs = await loadImage("./verify.png");
-        ctx.drawImage(badgadehfs, 400, 10, 56, 36);
+        ctx.drawImage(badgadehfs, 570, 645, 106, 60);
 			}
 
 
