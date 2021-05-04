@@ -28,7 +28,10 @@ const status = [
 				name: "h! | novo sistema de badgets!"
 			},
 			{
-				name: "h! | lançamento oficial em 10/4/21"
+				name: "h! | lançamento atrasado por falhas"
+			},
+			{
+				name: "h! | Meu site está sendo criado!"
 			}
     ];
     setInterval(() => {

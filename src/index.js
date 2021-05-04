@@ -131,7 +131,6 @@ client.on('ready', async () => {
 	console.log(c.blue('conectado'))
 	console.log(c.blue('id do dono:', process.env.OWNER_ID))
   console.log(c.green(`bot: ${client.user.tag} on-line`));
-  channel.send(`loginbot:\n:crown:dono: ${user.tag}\n${client.user.tag} está on!`)
 });
  client.on('guildMemberAdd', async member => {
 	const channel = member.guild.channels.cache.find(ch => ch.name === '「🎈」ʙem-ᴠɪɴᴅos');

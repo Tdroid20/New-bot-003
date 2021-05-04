@@ -37,11 +37,20 @@ module.exports = class {
                       if (
                         message.content.match(GetMention(this.client.user.id))
                       ) {
-                        message.channel.send(
-                          `Olá ${message.author}, meu prefixo no servidor é **${prefix}**.`
-                        );
-                      }
+message.channel.send(
+`Salve framer ${message.author},
 
+> <:botprefix:827607370598580244> meu prefixo nesse servidor:**${prefix}**.
+> <:papeis:833290697624256552> ultilize **${prefix}help** para obter ajuda
+> <:web:814883227651145728> meu site: https://highframe.page.link/home
+> <:ServerHF:827577620731920396> estou em ${this.client.guilds.cache.size} servidores
+
+mais
+
+> <:Hfversion:827586421140619276> meta de servidores: **${this.client.guilds.cache.size}/100**
+> <:meadd:835406871674224660> Me add: https://discord.com/oauth2/authorize?client_id=821548564421148692&scope=bot&permissions=2147483647`
+);
+                      }
                       let xp = user.Exp.xp;
                       let level = user.Exp.level;
                       let nextLevel = user.Exp.nextLevel * level;

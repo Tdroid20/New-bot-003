@@ -9,7 +9,7 @@ module.exports = class {
     try {
     const JOIN = new MessageEmbed()
       .setTimestamp()
-      .setColor(process.env.EMBED_COLOR)
+      .setColor("#35FF00")
       .setThumbnail(guild.iconURL({ dynamic: true, size: 2048 }));
 
     const INVITE = await guild
@@ -25,7 +25,7 @@ module.exports = class {
     if (INVITE) JOIN.setURL(INVITE).setTitle(guild.name);
     this.client.channels.cache.get(process.env.CHANNEL_LOGS).send(
       JOIN.setAuthor(
-        `${guild.client.user.username} | Adicionado à um Servidor`
+        `${guild.client.user.username} | me adicionou ao Servidor`
       ).addFields(
         {
           name: `Nome do Servidor`,
