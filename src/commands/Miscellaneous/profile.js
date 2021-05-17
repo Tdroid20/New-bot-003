@@ -78,8 +78,15 @@ module.exports = class Profile extends Command {
         ctx.drawImage(badgadehfs, 830, 25, 400, 200);
 			} if(user.badges.includes('verify')) {
         const badgadehfs = await loadImage("./verify.png");
-        ctx.drawImage(badgadehfs, 570, 645, 106, 60);
-			}
+        ctx.drawImage(badgadehfs, 570, 650, 106, 60);
+			} if(user.badges.includes('progv')) {
+        const badgadehfs = await loadImage("./progv.png");
+        ctx.drawImage(badgadehfs, 640, 630, 110, 106);
+			} if(user.badges.includes('cb')) {
+        const badgadehfs = await loadImage("./cb.png");
+        ctx.drawImage(badgadehfs, 730, 630, 110, 100);
+			} 
+
 
 
 

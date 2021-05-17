@@ -1,5 +1,7 @@
 const Guild = require("../../database/Schemas/Guild");
 
+const User = require("../../database/Schemas/User");
+
 function traduzir(number) {
   number = number.toString();
   var texto = ``,
@@ -51,14 +53,14 @@ module.exports = class {
           if (ch.total != "null") {
             let channel = guild.channels.cache.get(ch.total);
 
-            channel.setName(`<:userHf:828052673814986802>Total: ${guild.memberCount.toLocaleString()}`);
+            channel.setName(`👥Total: ${guild.memberCount.toLocaleString()}`);
           }
 
           if (ch.bot != "null") {
             let channel = guild.channels.cache.get(ch.bot);
 
             channel.setName(
-              `Bots: ${guild.members.cache
+              `🤖Bots: ${guild.members.cache
                 .filter((x) => x.user.bot)
                 .size.toLocaleString()}`
             );
@@ -68,7 +70,7 @@ module.exports = class {
             let channel = guild.channels.cache.get(ch.users);
 
             channel.setName(
-              `Usuários: ${guild.members.cache
+              `👤Usuários: ${guild.members.cache
                 .filter((x) => !x.user.bot)
                 .size.toLocaleString()}`
             );
@@ -89,5 +91,24 @@ module.exports = class {
     } catch (err) {
       if (err) console.log(`(ERRO) - guildMemberAdd - ${err}`);
     }
+		this.client.on("guildMemberAdd", member => {
+  if(member.guild.id == "776550391440998410" ) {
+    User.findOne({ idU: member.id }, async (e, res) => {
+          if(!res.badges) res.badges = [];
+          res.badges.push('cb');
+          await res.save()
+        })
+  }
+})
+this.client.on("guildMemberRemove", member => {
+ if(member.guild.id == "776550391440998410" ) {
+  User.findOne({ idU: member.id }, async (e, res) => {
+          if(!res.badges) res.badges = [];
+          res.badges = res.badges.filter(item => item !== "cb")
+
+          await res.save();
+        })
+ }
+})
   }
 };

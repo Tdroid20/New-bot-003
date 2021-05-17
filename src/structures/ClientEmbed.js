@@ -6,9 +6,9 @@ module.exports = class ClientEmbed extends (
   constructor(user, data = {}) {
     super(data);
     this.setTimestamp();
-    this.setColor(process.env.EMBED_COLOR);
+    this.setColor("#35ff00");
     this.setFooter(
-      `Pedido por ${user.tag}`,
+      `Droid Tech Company | Tdroid Programmer`,
       user.displayAvatarURL({ dynamic: true })
     );
   }

@@ -34,7 +34,7 @@ module.exports = class ServerStats extends Command {
       const st = server.serverstats;
       const ch = st.channels;
 
-      if (["remove", "desativar", "desligar"].includes(args[0].toLowerCase())) {
+      if (["off", "remove", "desativar", "desligar"].includes(args[0].toLowerCase())) {
         if (!st.status) {
           return message.channel.send(
             `${message.author}, o sistema já se encontra desativado.`
@@ -99,7 +99,7 @@ module.exports = class ServerStats extends Command {
         );
 
         message.guild.channels
-          .create(`Status do Servidor`, {
+          .create(`📊┃Status do Servidor`, {
             type: "category",
             permissionOverwrites: [
               {
@@ -123,7 +123,7 @@ module.exports = class ServerStats extends Command {
 
             message.guild.channels
               .create(
-                `Usuários: ${message.guild.members.cache
+                `👤┃Usuários: ${message.guild.members.cache
                   .filter((x) => !x.user.bot)
                   .size.toLocaleString()}`,
                 {
@@ -140,7 +140,7 @@ module.exports = class ServerStats extends Command {
 
             message.guild.channels
               .create(
-                `Bots: ${message.guild.members.cache
+                `🤖┃Bots: ${message.guild.members.cache
                   .filter((x) => x.user.bot)
                   .size.toLocaleString()}`,
                 {
@@ -157,7 +157,7 @@ module.exports = class ServerStats extends Command {
 
             message.guild.channels
               .create(
-                `Total: ${message.guild.members.cache.size.toLocaleString()}`,
+                `👥┃Total: ${message.guild.members.cache.size.toLocaleString()}`,
                 {
                   type: "voice",
                 }

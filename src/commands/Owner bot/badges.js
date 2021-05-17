@@ -1,6 +1,6 @@
 const User = require("../../database/Schemas/User");
 const Command = require("../../structures/Command");
-const owners = ["205884603246837762", "570700558533656586", "826287242154606604"]
+const owners = ["205884603246837762", "570700558533656586"]
 const discord = require('discord.js')
 const client = new discord.Client()
 const send = require("discord.js")

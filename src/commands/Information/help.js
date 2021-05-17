@@ -22,7 +22,6 @@ module.exports = class Help extends Command {
     const { commands } = message.client;
 
     const AJUDA = new ClientEmbed(author)
-			.setColor('#35FF00')
       .setAuthor(
         `${t("commands:help.title")}`,
         this.client.user.displayAvatarURL({ size: 2048 })
@@ -94,7 +93,6 @@ module.exports = class Help extends Command {
         .filter((x, f, y) => y.indexOf(x) === f);
 
       categories.forEach(async (category) => {
-        if(category == "Owner bot") return;
         const comandos = commands
           .filter((x) => x.category === category)
           .sort((a, b) => a.name.localeCompare(b.name))

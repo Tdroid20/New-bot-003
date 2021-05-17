@@ -50,8 +50,13 @@ module.exports = [
    emote: "<:partnerHf:828114179117285377>"
   },
   {
-  id: "hkbg",
+  id: "hk",
   name: "High Kingdom badges",
   emote: "<:HighKingdom:828466041628786700>"
+  },
+    {
+  id: "progv",
+  name: "Programador verificado",
+  emote: "<:ProgramadorVerificado:841061524122501201>"
   },
 ];
