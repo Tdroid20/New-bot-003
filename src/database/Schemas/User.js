@@ -1,3 +1,4 @@
+ 
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
@@ -78,6 +79,15 @@ let userSchema = new Schema({
     list: { type: Array, default: [] },
     has: { type: Number, default: 0 },
   },
+	ticket: { 
+		have: { type: Boolean, default, false },
+		channel: { type: String, default: null },
+		created: {ntype: String, default: null },
+	},
+	marry: {
+		time: { type: String, default: null },
+		user: { type: String, default: null },
+	},
   badges: { type: Array, default: [] }
 });
 
