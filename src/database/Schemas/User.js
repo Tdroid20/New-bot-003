@@ -79,16 +79,19 @@ let userSchema = new Schema({
     list: { type: Array, default: [] },
     has: { type: Number, default: 0 },
   },
-	ticket: { 
-		have: { type: Boolean, default, false },
-		channel: { type: String, default: null },
-		created: {ntype: String, default: null },
-	},
+	/* ticket: { 
+	 	have: { type: Boolean, default: false },
+	 	channel: { type: String, default: null },
+	 	created: {ntype: String, default: null },
+	},*/
 	marry: {
-		time: { type: String, default: null },
+		time: { type: Number, default: 0 },
 		user: { type: String, default: null },
+		has: { type: Boolean, default: false},
 	},
-  badges: { type: Array, default: [] }
+  badges: { type: Array, default: null, 
+	has: { type: Boolean, default: false }
+	}
 });
 
 const User = mongoose.model("Users", userSchema);
